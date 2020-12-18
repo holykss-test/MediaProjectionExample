@@ -1,11 +1,6 @@
 package tech.thdev.media_projection_library.ui
 
-import android.app.Activity
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.app.Service
+import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -18,8 +13,11 @@ import android.media.projection.MediaProjectionManager
 import android.os.Build
 import android.os.Environment
 import android.os.IBinder
+import android.util.DisplayMetrics
 import android.util.Log
+import android.util.Size
 import android.view.Surface
+import android.view.WindowManager
 import tech.thdev.media_projection_library.MediaProjectionStatus
 import tech.thdev.media_projection_library.MediaProjectionStatusData
 import tech.thdev.media_projection_library.R
@@ -39,6 +37,7 @@ import tech.thdev.media_projection_library.constant.EXTRA_SIZE_HEIGHT
 import tech.thdev.media_projection_library.constant.EXTRA_SIZE_WIDTH
 import tech.thdev.media_projection_library.constant.EXTRA_SURFACE
 import java.io.FileOutputStream
+
 
 open class MediaProjectionAccessService : Service() {
 
@@ -192,46 +191,7 @@ open class MediaProjectionAccessService : Service() {
             // 그 이미지를 받아서 비트맵에
             // surface
 
-            num = 0
-            
-            val imageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
-
-
-            imageReader.setOnImageAvailableListener(
-                    { reader ->
-
-                        try {
-
-                            check(reader != null)
-
-                            reader.acquireLatestImage().use { image ->
-                                val path =
-                                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).resolve("myscreen-$num.jpg")
-                                num++
-                                FileOutputStream(path).use { fos ->
-                                    val planes = image.planes;
-                                    val pixelStride = planes.first().pixelStride
-                                    val rowStride = planes.first().rowStride
-                                    val rowPadding = rowStride - pixelStride * imageReader.width;
-                                    val buffer = planes[0].buffer.rewind();
-                                    val bitmap = Bitmap.createBitmap(
-                                            imageReader.width + rowPadding / pixelStride,
-                                            imageReader.height,
-                                            Bitmap.Config.ARGB_8888
-                                    )
-                                    bitmap.copyPixelsFromBuffer(buffer);
-                                    bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fos)
-                                }
-                                Log.d("IMAGE_OK", "IMAGE OK")
-                            }
-                        } catch (t: Throwable) {
-                            Log.e("IMAGE_SAVE", "${t.message}")
-                            t.printStackTrace()
-                        }
-
-                    },
-                    null
-            )
+            val imageReader = createImageReader()
 
             virtualDisplay = mediaProjection.createVirtualDisplay(
                     projectionName,
@@ -248,6 +208,70 @@ open class MediaProjectionAccessService : Service() {
         } else {
             sendEvent(MediaProjectionStatus.OnFail)
         }
+    }
+
+    private fun createImageReader(): ImageReader {
+        num = 0
+
+        val imageReader = ImageReader.newInstance(getDeviceSize().width, getDeviceSize().height, PixelFormat.RGBA_8888, 2);
+
+
+        imageReader.setOnImageAvailableListener(
+                { reader ->
+
+                    try {
+                        check(reader != null)
+
+                        reader.acquireLatestImage().use { image ->
+                            val root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                                    .resolve("측정하고-패딩")
+
+                            if (!root.exists()) root.mkdirs()
+
+                            val path = root.resolve("${"%04d".format(num)}.jpg")
+
+
+                            num++
+                            FileOutputStream(path).use { fos ->
+                                val planes = image.planes;
+                                val pixelStride = planes.first().pixelStride
+                                val rowStride = planes.first().rowStride
+                                val rowPadding = rowStride - pixelStride * imageReader.width;
+                                val buffer = planes[0].buffer.rewind();
+                                val extra = rowPadding / pixelStride
+                                val width = imageReader.width + extra
+                                val height = imageReader.height
+                                val bitmap = Bitmap.createBitmap(
+                                        width,
+                                        height,
+                                        Bitmap.Config.ARGB_8888
+                                )
+
+                                Log.d("IMAGE_SIZE", "($width, $height) pixelStride: $pixelStride rowStride: $rowStride rowPadding: $rowPadding, extra: $extra")
+
+                                bitmap.copyPixelsFromBuffer(buffer);
+                                bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fos)
+                            }
+                            Log.d("IMAGE_OK", "IMAGE OK")
+                        }
+                    } catch (t: Throwable) {
+                        Log.e("IMAGE_SAVE", "${t.message}")
+                        t.printStackTrace()
+                    }
+
+                },
+                null
+        )
+        return imageReader
+    }
+
+    private fun getDeviceSize(): Size {
+        val display = (getSystemService(WINDOW_SERVICE) as WindowManager).defaultDisplay
+        val dm = DisplayMetrics()
+        display.getMetrics(dm)
+
+        val size = Size(dm.widthPixels, dm.heightPixels);
+        return size
     }
 
     fun stopMediaProjection() {
