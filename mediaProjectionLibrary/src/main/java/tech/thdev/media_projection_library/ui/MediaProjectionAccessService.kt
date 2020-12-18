@@ -13,11 +13,8 @@ import android.media.projection.MediaProjectionManager
 import android.os.Build
 import android.os.Environment
 import android.os.IBinder
-import android.util.DisplayMetrics
 import android.util.Log
-import android.util.Size
 import android.view.Surface
-import android.view.WindowManager
 import tech.thdev.media_projection_library.MediaProjectionStatus
 import tech.thdev.media_projection_library.MediaProjectionStatusData
 import tech.thdev.media_projection_library.R
@@ -177,8 +174,6 @@ open class MediaProjectionAccessService : Service() {
         )
     }
 
-    var num = 0;
-
     fun startMediaProjection(
         surface: Surface,
         projectionName: String = DEFAULT_VALUE_PROJECTION_NAME,
@@ -186,12 +181,6 @@ open class MediaProjectionAccessService : Service() {
         height: Int = DeviceSize(this).size.height
     ) {
         if (::mediaProjection.isInitialized) {
-            // 콜백으로 화면 이미지 넘어옴
-            // 그 이미지를 받아서 비트맵에
-            // surface
-
-            val imageReader = createImageReader()
-
             virtualDisplay = mediaProjection.createVirtualDisplay(
                     projectionName,
                     width,
@@ -199,7 +188,7 @@ open class MediaProjectionAccessService : Service() {
                     application.resources.displayMetrics.densityDpi,
                     DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
 //                surface,
-                    imageReader.surface,
+                    createImageReader().surface,
                     null,
                     null
             )
@@ -210,9 +199,10 @@ open class MediaProjectionAccessService : Service() {
     }
 
     private fun createImageReader(): ImageReader {
-        num = 0
+        var num = 0
 
-        val imageReader = ImageReader.newInstance(getDeviceSize().width, getDeviceSize().height, PixelFormat.RGBA_8888, 2);
+        val size = DeviceSize(this).size
+        val imageReader = ImageReader.newInstance(size.width, size.height, PixelFormat.RGBA_8888, 2);
 
 
         imageReader.setOnImageAvailableListener(
@@ -223,7 +213,7 @@ open class MediaProjectionAccessService : Service() {
 
                         reader.acquireLatestImage().use { image ->
                             val root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                                    .resolve("측정하고-패딩")
+                                    .resolve("가상디스플레이사이즈-통일")
 
                             if (!root.exists()) root.mkdirs()
 
@@ -262,15 +252,6 @@ open class MediaProjectionAccessService : Service() {
                 null
         )
         return imageReader
-    }
-
-    private fun getDeviceSize(): Size {
-        val display = (getSystemService(WINDOW_SERVICE) as WindowManager).defaultDisplay
-        val dm = DisplayMetrics()
-        display.getMetrics(dm)
-
-        val size = Size(dm.widthPixels, dm.heightPixels);
-        return size
     }
 
     fun stopMediaProjection() {
