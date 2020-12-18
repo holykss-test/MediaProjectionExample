@@ -188,7 +188,7 @@ open class MediaProjectionAccessService : Service() {
                     application.resources.displayMetrics.densityDpi,
                     DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
 //                surface,
-                    createImageReader().surface,
+                    createImageReader(width, height).surface,
                     null,
                     null
             )
@@ -198,11 +198,10 @@ open class MediaProjectionAccessService : Service() {
         }
     }
 
-    private fun createImageReader(): ImageReader {
+    private fun createImageReader(width: Int, height: Int): ImageReader {
         var num = 0
 
-        val size = DeviceSize(this).size
-        val imageReader = ImageReader.newInstance(size.width, size.height, PixelFormat.RGBA_8888, 2);
+        val imageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
 
 
         imageReader.setOnImageAvailableListener(
@@ -213,9 +212,12 @@ open class MediaProjectionAccessService : Service() {
 
                         reader.acquireLatestImage().use { image ->
                             val root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                                    .resolve("가상디스플레이사이즈-통일")
+                                    .resolve("no-padding")
 
-                            if (!root.exists()) root.mkdirs()
+                            if (!root.exists()) {
+                                val result = root.mkdirs()
+                                Log.d("IMAGE_SAVE", "make folder $root $result")
+                            }
 
                             val path = root.resolve("${"%04d".format(num)}.jpg")
 
