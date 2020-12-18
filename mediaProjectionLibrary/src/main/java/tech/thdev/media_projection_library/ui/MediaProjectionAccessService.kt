@@ -7,6 +7,7 @@ import android.graphics.Bitmap
 import android.graphics.PixelFormat
 import android.hardware.display.DisplayManager
 import android.hardware.display.VirtualDisplay
+import android.media.Image
 import android.media.ImageReader
 import android.media.projection.MediaProjection
 import android.media.projection.MediaProjectionManager
@@ -14,6 +15,7 @@ import android.os.Build
 import android.os.Environment
 import android.os.IBinder
 import android.util.Log
+import android.util.Size
 import android.view.Surface
 import tech.thdev.media_projection_library.MediaProjectionStatus
 import tech.thdev.media_projection_library.MediaProjectionStatusData
@@ -167,18 +169,19 @@ open class MediaProjectionAccessService : Service() {
 
     private fun startMediaProjection(intent: Intent) {
         startMediaProjection(
-            surface = intent.getParcelableExtra(EXTRA_SURFACE) as Surface,
-            projectionName = intent.getStringExtra(EXTRA_PROJECTION_NAME) ?: DEFAULT_VALUE_PROJECTION_NAME,
-            width = intent.getIntExtra(EXTRA_SIZE_WIDTH, DeviceSize(this).size.width),
-            height = intent.getIntExtra(EXTRA_SIZE_HEIGHT, DeviceSize(this).size.height)
+                surface = intent.getParcelableExtra(EXTRA_SURFACE) as Surface,
+                projectionName = intent.getStringExtra(EXTRA_PROJECTION_NAME)
+                        ?: DEFAULT_VALUE_PROJECTION_NAME,
+                width = intent.getIntExtra(EXTRA_SIZE_WIDTH, DeviceSize(this).size.width),
+                height = intent.getIntExtra(EXTRA_SIZE_HEIGHT, DeviceSize(this).size.height)
         )
     }
 
     fun startMediaProjection(
-        surface: Surface,
-        projectionName: String = DEFAULT_VALUE_PROJECTION_NAME,
-        width: Int = DeviceSize(this).size.width,
-        height: Int = DeviceSize(this).size.height
+            surface: Surface,
+            projectionName: String = DEFAULT_VALUE_PROJECTION_NAME,
+            width: Int = DeviceSize(this).size.width,
+            height: Int = DeviceSize(this).size.height
     ) {
         if (::mediaProjection.isInitialized) {
             virtualDisplay = mediaProjection.createVirtualDisplay(
@@ -224,22 +227,15 @@ open class MediaProjectionAccessService : Service() {
 
                             num++
                             FileOutputStream(path).use { fos ->
-                                val planes = image.planes;
-                                val pixelStride = planes.first().pixelStride
-                                val rowStride = planes.first().rowStride
-                                val rowPadding = rowStride - pixelStride * imageReader.width;
-                                val buffer = planes[0].buffer.rewind();
-                                val extra = rowPadding / pixelStride
-                                val width = imageReader.width// + extra
-                                val height = imageReader.height
+                                val size = calculateSizeWithPadding(image, imageReader)
+
                                 val bitmap = Bitmap.createBitmap(
-                                        width,
-                                        height,
+                                        size.width,
+                                        size.height,
                                         Bitmap.Config.ARGB_8888
                                 )
 
-                                Log.d("IMAGE_SIZE", "($width, $height) pixelStride: $pixelStride rowStride: $rowStride rowPadding: $rowPadding, extra: $extra")
-
+                                val buffer = image.planes.first().buffer.rewind();
                                 bitmap.copyPixelsFromBuffer(buffer);
                                 bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fos)
                             }
@@ -254,6 +250,18 @@ open class MediaProjectionAccessService : Service() {
                 null
         )
         return imageReader
+    }
+
+    private fun calculateSizeWithPadding(image: Image, imageReader: ImageReader): Size {
+        val pixelStride = image.planes.first().pixelStride
+        val rowStride = image.planes.first().rowStride
+        val rowPadding = rowStride - pixelStride * imageReader.width;
+        val extra = rowPadding / pixelStride
+        val result = Size(imageReader.width + extra, imageReader.height)
+
+        Log.d("IMAGE_SIZE", "(${result.width}, ${result.height}) pixelStride: $pixelStride rowStride: $rowStride rowPadding: $rowPadding, extra: $extra")
+
+        return result
     }
 
     fun stopMediaProjection() {
