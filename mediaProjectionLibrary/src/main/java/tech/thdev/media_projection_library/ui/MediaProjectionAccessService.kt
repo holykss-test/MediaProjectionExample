@@ -8,12 +8,17 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.PixelFormat
 import android.hardware.display.DisplayManager
 import android.hardware.display.VirtualDisplay
+import android.media.ImageReader
 import android.media.projection.MediaProjection
 import android.media.projection.MediaProjectionManager
 import android.os.Build
+import android.os.Environment
 import android.os.IBinder
+import android.util.Log
 import android.view.Surface
 import tech.thdev.media_projection_library.MediaProjectionStatus
 import tech.thdev.media_projection_library.MediaProjectionStatusData
@@ -32,6 +37,7 @@ import tech.thdev.media_projection_library.constant.EXTRA_SIZE_HEIGHT
 import tech.thdev.media_projection_library.constant.EXTRA_SIZE_WIDTH
 import tech.thdev.media_projection_library.constant.EXTRA_SURFACE
 import tech.thdev.media_projection_library.util.DeviceSize
+import java.io.FileOutputStream
 
 open class MediaProjectionAccessService : Service() {
 
@@ -44,11 +50,11 @@ open class MediaProjectionAccessService : Service() {
         private const val CHANNEL_ID = "MediaProjectionService"
 
         fun newService(
-            context: Context
+                context: Context
         ): Intent =
-            Intent(context, MediaProjectionAccessService::class.java).apply {
-                action = ACTION_INIT
-            }
+                Intent(context, MediaProjectionAccessService::class.java).apply {
+                    action = ACTION_INIT
+                }
 
         fun newStartMediaProjection(
                 context: Context,
@@ -57,27 +63,27 @@ open class MediaProjectionAccessService : Service() {
                 width: Int = DeviceSize(context).size.width,
                 height: Int = DeviceSize(context).size.height
         ): Intent =
-            newService(context).apply {
-                putExtra(EXTRA_SURFACE, surface)
-                putExtra(EXTRA_PROJECTION_NAME, projectionName)
-                putExtra(EXTRA_SIZE_WIDTH, width)
-                putExtra(EXTRA_SIZE_HEIGHT, height)
-                action = ACTION_START
-            }
+                newService(context).apply {
+                    putExtra(EXTRA_SURFACE, surface)
+                    putExtra(EXTRA_PROJECTION_NAME, projectionName)
+                    putExtra(EXTRA_SIZE_WIDTH, width)
+                    putExtra(EXTRA_SIZE_HEIGHT, height)
+                    action = ACTION_START
+                }
 
         fun newStopMediaProjection(
-            context: Context
+                context: Context
         ): Intent =
-            newService(context).apply {
-                action = ACTION_STOP
-            }
+                newService(context).apply {
+                    action = ACTION_STOP
+                }
 
         fun newStopService(
-            context: Context
+                context: Context
         ): Intent =
-            newService(context).apply {
-                action = ACTION_SELF_STOP
-            }
+                newService(context).apply {
+                    action = ACTION_SELF_STOP
+                }
     }
 
     private val mediaProjectionManager: MediaProjectionManager by lazy {
@@ -93,8 +99,8 @@ open class MediaProjectionAccessService : Service() {
         createNotificationChannel()
         val notificationIntent = Intent(this, MediaProjectionAccessActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(
-            this,
-            0, notificationIntent, 0
+                this,
+                0, notificationIntent, 0
         )
 
         val notification = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -102,10 +108,10 @@ open class MediaProjectionAccessService : Service() {
         } else {
             Notification.Builder(this)
         }
-            .setContentTitle("Foreground Service")
-            .setSmallIcon(R.drawable.ic_baseline_fiber_manual_record_24)
-            .setContentIntent(pendingIntent)
-            .build()
+                .setContentTitle("Foreground Service")
+                .setSmallIcon(R.drawable.ic_baseline_fiber_manual_record_24)
+                .setContentIntent(pendingIntent)
+                .build()
         startForeground(FOREGROUND_SERVICE_ID, notification)
     }
 
@@ -172,6 +178,8 @@ open class MediaProjectionAccessService : Service() {
         )
     }
 
+    var num = 0;
+
     fun startMediaProjection(
         surface: Surface,
         projectionName: String = DEFAULT_VALUE_PROJECTION_NAME,
@@ -179,15 +187,61 @@ open class MediaProjectionAccessService : Service() {
         height: Int = DeviceSize(this).size.height
     ) {
         if (::mediaProjection.isInitialized) {
+            // 콜백으로 화면 이미지 넘어옴
+            // 그 이미지를 받아서 비트맵에
+            // surface
+
+            num = 0
+            
+            val imageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
+
+
+            imageReader.setOnImageAvailableListener(
+                    { reader ->
+
+                        try {
+
+                            check(reader != null)
+
+                            reader.acquireLatestImage().use { image ->
+                                val path =
+                                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).resolve("myscreen-$num.jpg")
+                                num++
+                                FileOutputStream(path).use { fos ->
+                                    val planes = image.planes;
+                                    val pixelStride = planes.first().pixelStride
+                                    val rowStride = planes.first().rowStride
+                                    val rowPadding = rowStride - pixelStride * imageReader.width;
+                                    val buffer = planes[0].buffer.rewind();
+                                    val bitmap = Bitmap.createBitmap(
+                                            imageReader.width + rowPadding / pixelStride,
+                                            imageReader.height,
+                                            Bitmap.Config.ARGB_8888
+                                    )
+                                    bitmap.copyPixelsFromBuffer(buffer);
+                                    bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fos)
+                                }
+                                Log.d("IMAGE_OK", "IMAGE OK")
+                            }
+                        } catch (t: Throwable) {
+                            Log.e("IMAGE_SAVE", "${t.message}")
+                            t.printStackTrace()
+                        }
+
+                    },
+                    null
+            )
+
             virtualDisplay = mediaProjection.createVirtualDisplay(
-                projectionName,
-                width,
-                height,
-                application.resources.displayMetrics.densityDpi,
-                DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
-                surface,
-                null,
-                null
+                    projectionName,
+                    width,
+                    height,
+                    application.resources.displayMetrics.densityDpi,
+                    DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
+//                surface,
+                    imageReader.surface,
+                    null,
+                    null
             )
             sendEvent(MediaProjectionStatus.OnStarted)
         } else {
@@ -210,9 +264,9 @@ open class MediaProjectionAccessService : Service() {
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val serviceChannel = NotificationChannel(
-                CHANNEL_ID,
-                "Foreground Service Channel",
-                NotificationManager.IMPORTANCE_DEFAULT
+                    CHANNEL_ID,
+                    "Foreground Service Channel",
+                    NotificationManager.IMPORTANCE_DEFAULT
             )
             (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).apply {
                 createNotificationChannel(serviceChannel)
