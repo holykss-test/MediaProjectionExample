@@ -231,7 +231,7 @@ open class MediaProjectionAccessService : Service() {
                                 val rowPadding = rowStride - pixelStride * imageReader.width;
                                 val buffer = planes[0].buffer.rewind();
                                 val extra = rowPadding / pixelStride
-                                val width = imageReader.width + extra
+                                val width = imageReader.width// + extra
                                 val height = imageReader.height
                                 val bitmap = Bitmap.createBitmap(
                                         width,
