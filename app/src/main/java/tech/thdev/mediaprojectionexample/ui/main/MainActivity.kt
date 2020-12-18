@@ -1,5 +1,6 @@
 package tech.thdev.mediaprojectionexample.ui.main
 
+import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -42,6 +43,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
+
+        contentMainBinding.btnPermission.setOnClickListener {
+            requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 10001)
+        }
 
         contentMainBinding.btnStartMediaProjectionService.setOnClickListener {
             runService()
