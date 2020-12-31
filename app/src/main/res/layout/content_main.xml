@@ -13,13 +13,22 @@
     tools:showIn="@layout/activity_main">
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_permission"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Permission to write external storage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_start_media_projection_service"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/start_media_projection_service"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btn_permission" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_start_media_projection_activity"

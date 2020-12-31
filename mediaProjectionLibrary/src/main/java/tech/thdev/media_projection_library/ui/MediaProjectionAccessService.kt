@@ -8,12 +8,19 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.PixelFormat
 import android.hardware.display.DisplayManager
 import android.hardware.display.VirtualDisplay
+import android.media.Image
+import android.media.ImageReader
 import android.media.projection.MediaProjection
 import android.media.projection.MediaProjectionManager
 import android.os.Build
+import android.os.Environment
 import android.os.IBinder
+import android.util.Log
+import android.util.Size
 import android.view.Surface
 import tech.thdev.media_projection_library.MediaProjectionStatus
 import tech.thdev.media_projection_library.MediaProjectionStatusData
@@ -33,6 +40,7 @@ import tech.thdev.media_projection_library.constant.EXTRA_RESULT_CODE
 import tech.thdev.media_projection_library.constant.EXTRA_SIZE_HEIGHT
 import tech.thdev.media_projection_library.constant.EXTRA_SIZE_WIDTH
 import tech.thdev.media_projection_library.constant.EXTRA_SURFACE
+import java.io.FileOutputStream
 
 open class MediaProjectionAccessService : Service() {
 
@@ -180,6 +188,17 @@ open class MediaProjectionAccessService : Service() {
         height: Int = DEFAULT_VALUE_SIZE_HEIGHT
     ) {
         if (::mediaProjection.isInitialized) {
+            /**
+             * chromebook pixel go 에서, 화면 캡쳐가 정상 작동하지 않아, 이미지 파일로 출력 후, 분석해봄.
+             * 1. width/height 값을 잘못 입력하면, 화면에 bitmap padding 잘못 처리한 것 처럼 나옴.
+             * 2. width/height 값을 제대로 입력하면 이미지 출력은 정상이나, surface 에 출력하는건 여전히 제대로 나오지 않음.
+              */
+
+            val usingImageReader = true
+            val surface =
+                if (usingImageReader) createImageReader(width, height, surface).surface
+                else surface
+
             virtualDisplay = mediaProjection.createVirtualDisplay(
                 projectionName,
                 width,
@@ -194,6 +213,71 @@ open class MediaProjectionAccessService : Service() {
         } else {
             sendEvent(MediaProjectionStatus.OnFail)
         }
+    }
+
+    private fun createImageReader(width: Int, height: Int, targetSurface: Surface): ImageReader {
+        var num = 0
+        val imageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
+
+        imageReader.setOnImageAvailableListener(
+                { reader ->
+
+                    try {
+                        check(reader != null)
+
+                        reader.acquireLatestImage().use { image ->
+                            val root = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                                    .resolve("no-padding")
+
+                            if (!root.exists()) {
+                                val result = root.mkdirs()
+                                Log.d("IMAGE_SAVE", "make folder $root $result")
+                            }
+
+                            val path = root.resolve("${"%04d".format(num)}.jpg")
+
+
+                            num++
+                            FileOutputStream(path).use { fos ->
+                                val size = calculateSizeWithPadding(image, imageReader)
+//                                val size = Size(width, height)
+                                val bitmap = Bitmap.createBitmap(
+                                        size.width,
+                                        size.height,
+                                        Bitmap.Config.ARGB_8888
+                                )
+
+                                val buffer = image.planes.first().buffer.rewind();
+                                bitmap.copyPixelsFromBuffer(buffer);
+                                bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fos)
+
+                                // targetSurface 에 bitmap 복사하기
+
+                            }
+                            Log.d("IMAGE_OK", "IMAGE OK")
+
+                        }
+                    } catch (t: Throwable) {
+                        Log.e("IMAGE_SAVE", "${t.message}")
+                        t.printStackTrace()
+                    }
+
+                },
+                null
+        )
+        return imageReader
+    }
+
+    private fun calculateSizeWithPadding(image: Image, imageReader: ImageReader): Size {
+        val pixelStride = image.planes.first().pixelStride
+        val rowStride = image.planes.first().rowStride
+        val rowPadding = rowStride - pixelStride * imageReader.width;
+        val extra = rowPadding / pixelStride
+        val result = Size(imageReader.width + extra, imageReader.height)
+
+        Log.d("IMAGE_SIZE", "(${result.width}, ${result.height}) pixelStride: $pixelStride rowStride: $rowStride rowPadding: $rowPadding, extra: $extra")
+
+        return result
     }
 
     fun stopMediaProjection() {
