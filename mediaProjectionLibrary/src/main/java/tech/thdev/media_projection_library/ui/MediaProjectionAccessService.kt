@@ -191,8 +191,8 @@ open class MediaProjectionAccessService : Service() {
                     application.resources.displayMetrics.densityDpi,
                     DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
 //                surface,
-                    createImageReader(width, height).surface,
-                    null,
+                    createImageReader(width, height, surface).surface,
+                    createCallback(),
                     null
             )
             sendEvent(MediaProjectionStatus.OnStarted)
@@ -201,11 +201,14 @@ open class MediaProjectionAccessService : Service() {
         }
     }
 
-    private fun createImageReader(width: Int, height: Int): ImageReader {
+    private fun createCallback(): VirtualDisplay.Callback {
+        return object : VirtualDisplay.Callback() {
+        }
+    }
+
+    private fun createImageReader(width: Int, height: Int, targetSurface: Surface): ImageReader {
         var num = 0
-
         val imageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
-
 
         imageReader.setOnImageAvailableListener(
                 { reader ->
@@ -228,7 +231,7 @@ open class MediaProjectionAccessService : Service() {
                             num++
                             FileOutputStream(path).use { fos ->
                                 val size = calculateSizeWithPadding(image, imageReader)
-
+//                                val size = Size(width, height)
                                 val bitmap = Bitmap.createBitmap(
                                         size.width,
                                         size.height,
@@ -238,8 +241,12 @@ open class MediaProjectionAccessService : Service() {
                                 val buffer = image.planes.first().buffer.rewind();
                                 bitmap.copyPixelsFromBuffer(buffer);
                                 bitmap.compress(Bitmap.CompressFormat.JPEG, 85, fos)
+
+                                // targetSurface 에 bitmap 복사하기
+
                             }
                             Log.d("IMAGE_OK", "IMAGE OK")
+
                         }
                     } catch (t: Throwable) {
                         Log.e("IMAGE_SAVE", "${t.message}")
