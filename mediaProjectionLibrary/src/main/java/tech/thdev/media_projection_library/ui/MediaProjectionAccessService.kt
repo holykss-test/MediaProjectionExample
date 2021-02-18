@@ -190,8 +190,8 @@ open class MediaProjectionAccessService : Service() {
                     height,
                     application.resources.displayMetrics.densityDpi,
                     DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
-//                surface,
-                    createImageReader(width, height, surface).surface,
+                surface,
+//                    createImageReader(width, height, surface).surface,
                     createCallback(),
                     null
             )

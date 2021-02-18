@@ -2,17 +2,17 @@ package tech.thdev.mediaprojectionexample.ui.util
 
 import android.app.Service
 import android.content.Context
-import android.util.DisplayMetrics
+import android.graphics.Point
 import android.util.Size
 import android.view.WindowManager
 
 object DeviceUtil {
     fun getDeviceSize(context: Context): Size {
-        val dm = DisplayMetrics()
+        val point = Point();
         val display =
             (context.getSystemService(Service.WINDOW_SERVICE) as WindowManager).defaultDisplay
-        display.getMetrics(dm)
+        display.getRealSize(point)
 
-        return Size(dm.widthPixels, dm.heightPixels)
+        return Size(point.x, point.y)
     }
 }
