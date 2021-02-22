@@ -1,0 +1,733 @@
+2021-02-22 11:06:38.898 127-2330/? D/vndksupport: Loading /vendor/lib64/hw/gralloc.cros.so from current namespace instead of sphal namespace.
+2021-02-22 11:06:38.903 127-2330/? W/EGL-MAIN: MESA-LOADER: failed to open vgem (search paths /system/lib64/dri:/system/vendor/lib64/dri)
+2021-02-22 11:06:38.914 127-2330/? I/ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+2021-02-22 11:06:38.914 127-2330/? I/ConfigStore: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasHDRDisplay retrieved: 0
+2021-02-22 11:06:38.914 127-2330/? E/libEGL: eglSetBlobCacheFuncsANDROID resulted in an error: 0x300c
+2021-02-22 11:06:38.914 127-2330/? I/OpenGLRenderer: Initialized EGL, version 1.4
+2021-02-22 11:06:38.914 127-2330/? D/OpenGLRenderer: Swap behavior 2
+2021-02-22 11:06:38.915 127-2330/? E/OpenGLRenderer: Device claims wide gamut support, cannot find matching config, error = EGL_SUCCESS
+2021-02-22 11:06:38.926 797-808/? D/ArcMediaControllerManager: onTaskMovedToFront: 36
+2021-02-22 11:06:38.926 737-737/? D/ArcAppTaskTracker: Calculating task stack diff.
+2021-02-22 11:06:38.926 737-737/? D/ArcAppTaskTracker: Active task: 36.
+2021-02-22 11:06:38.927 797-808/? I/ArcMediaControllerManager: onAppBecameActive: tech.thdev.app
+    
+    --------- beginning of system
+2021-02-22 11:06:38.939 127-2227/? I/DisplayManagerService: Display device added: DisplayDeviceInfo{"projection-name": uniqueId="virtual:tech.thdev.app,10076,projection-name,0", 1920 x 980, modeId 1570, defaultModeId 1570, supportedModes [{id=1570, width=1920, height=980, fps=60.0}], colorMode 0, supportedColorModes [0], HdrCapabilities null, density 160, 160.0 x 160.0 dpi, appVsyncOff 0, presDeadline 16666666, touch NONE, rotation 0, type VIRTUAL, state ON, owner tech.thdev.app (uid 10076), FLAG_PRIVATE, FLAG_PRESENTATION}
+2021-02-22 11:06:38.941 11-11/? I/HWC2: Creating virtual display
+2021-02-22 11:06:38.942 127-2227/? I/ArcScreenCaptureService: openSession tech.thdev.app 200x200
+2021-02-22 11:06:38.951 127-2227/? I/ArcScreenCaptureService: Successfully opened screen capture session
+2021-02-22 11:06:38.951 11-11/? I/HWC2: Created virtual display
+2021-02-22 11:06:38.951 11-11/? E/HWComposer: getSupportedPerFrameMetadata: getSupportedPerFrameMetadata failed for display 2: Unsupported (8)
+2021-02-22 11:06:38.951 11-11/? D/SurfaceFlinger: duplicate layer name: changing Display Root to Display Root#2
+2021-02-22 11:06:38.954 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:38.954 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:38.954 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:38.954 11-11/? D/SurfaceFlinger: duplicate layer name: changing Display Overlays to Display Overlays#2
+2021-02-22 11:06:38.955 11-11/? D/SurfaceFlinger: duplicate layer name: changing mBelowAppWindowsContainers to mBelowAppWindowsContainers#2
+2021-02-22 11:06:38.957 11-11/? D/SurfaceFlinger: duplicate layer name: changing animationLayer to animationLayer#1
+2021-02-22 11:06:38.958 11-11/? D/SurfaceFlinger: duplicate layer name: changing boostedAnimationLayer to boostedAnimationLayer#1
+2021-02-22 11:06:38.958 11-11/? D/SurfaceFlinger: duplicate layer name: changing homeAnimationLayer to homeAnimationLayer#1
+2021-02-22 11:06:38.960 11-11/? D/SurfaceFlinger: duplicate layer name: changing splitScreenDividerAnchor to splitScreenDividerAnchor#1
+2021-02-22 11:06:38.961 11-11/? D/SurfaceFlinger: duplicate layer name: changing mAboveAppWindowsContainers to mAboveAppWindowsContainers#2
+2021-02-22 11:06:38.963 11-11/? D/SurfaceFlinger: duplicate layer name: changing mImeWindowsContainers to mImeWindowsContainers#2
+2021-02-22 11:06:38.981 127-264/? I/ActivityManager: Override config changes=20005df8 {0.0 ?mcc?mnc ?localeList ?layoutDir sw980dp w1920dp h980dp 160dpi xlrg long land ?uimode ?night finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1920, 980) mAppBounds=Rect(0, 0 - 1920, 980) mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined}} for displayId=10011
+2021-02-22 11:06:38.982 127-264/? E/ActivityManagerInjectorArc: getPipTaskOrRemovePinnedStackIfEmpty: Pinned stack doesn't exist
+2021-02-22 11:06:38.986 127-256/? W/ActivityManager: resizePinnedStackLocked: pinned stack not found
+2021-02-22 11:06:39.014 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.014 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.014 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.044 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.044 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.044 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.076 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.076 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.076 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.093 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.093 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.093 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.110 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.110 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.110 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.126 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.126 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.126 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.131 737-737/? D/ArcAppTaskTracker: Calculating task stack diff.
+2021-02-22 11:06:39.136 737-737/? D/ArcAppTaskTracker: Active task: 36.
+2021-02-22 11:06:39.145 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.145 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.145 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.159 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.159 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.159 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.175 11-270/? W/SurfaceFlinger: Attempting to destroy on removed layer: 77d4a76 Sys2038:com.android.systemui/org.chromium.arc.systemui.ArcMediaProjectionPermissionActivity#0
+2021-02-22 11:06:39.179 127-2227/? I/ActivityManagerInjectorArc: Topmost activity removed from task: ActivityRecord{830259e u0 com.android.systemui/org.chromium.arc.systemui.ArcMediaProjectionPermissionActivity t-1 f}
+2021-02-22 11:06:39.188 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.188 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.188 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.188 127-2227/? I/ActivityManagerInjectorArc: Topmost activity removed from task: ActivityRecord{741eb4 u0 tech.thdev.app/tech.thdev.media_projection_library.ui.MediaProjectionAccessActivity t-1 f}
+2021-02-22 11:06:39.209 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.209 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.209 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.226 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.226 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.226 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.242 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.242 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.242 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.259 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.259 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.259 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.275 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.275 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.276 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.292 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.292 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.292 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.309 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.309 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.309 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.325 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.326 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.326 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.342 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.342 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.342 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.359 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.359 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.359 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.375 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.375 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.375 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.392 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.392 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.392 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.409 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.409 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.409 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.425 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.425 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.425 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.442 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.442 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.442 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.459 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.459 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.459 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.475 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.475 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.475 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.492 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.492 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.492 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.509 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.509 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.509 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.526 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.526 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.526 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.542 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.542 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.542 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.559 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.559 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.559 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.576 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.576 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.576 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.592 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.592 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.592 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.609 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.609 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.609 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.626 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.626 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.626 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.642 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.642 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.642 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.659 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.659 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.659 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.676 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.676 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.676 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.692 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.692 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.692 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.708 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.708 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.708 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.725 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.725 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.725 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.741 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.741 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.741 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.758 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.758 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.758 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.775 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.775 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.775 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.791 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.791 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.791 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.808 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.808 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.808 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.825 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.825 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.825 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.841 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.841 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.841 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.858 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.858 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.858 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.875 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.875 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.875 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.891 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.891 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.891 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.908 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.908 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.908 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.925 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.925 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.925 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.941 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.941 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.941 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.958 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.958 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.958 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.976 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.976 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.976 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:39.993 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:39.993 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:39.993 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.038 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.038 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.038 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.060 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.060 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.060 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.075 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.075 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.075 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.091 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.091 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.091 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.108 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.108 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.108 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.125 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.125 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.125 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.141 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.141 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.141 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.158 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.158 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.158 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.175 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.175 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.175 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.191 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.191 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.191 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.208 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.208 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.208 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.225 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.225 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.225 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.241 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.241 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.241 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.258 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.258 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.258 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.275 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.275 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.275 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.292 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.292 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.292 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.308 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.308 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.308 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.325 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.325 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.325 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.341 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.341 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.341 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.358 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.358 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.358 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.375 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.375 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.375 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.391 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.391 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.391 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.408 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.408 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.408 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.425 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.425 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.425 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.441 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.441 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.441 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.458 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.458 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.458 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.475 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.475 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.475 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.491 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.491 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.491 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.508 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.508 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.508 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.525 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.525 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.525 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.541 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.541 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.541 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.558 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.558 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.558 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.575 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.575 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.575 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.591 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.591 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.591 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.608 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.608 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.608 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.625 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.625 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.625 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.641 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.641 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.641 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.658 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.658 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.658 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.675 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.675 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.675 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.691 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.691 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.691 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.708 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.708 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.708 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.725 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.725 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.725 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.741 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.741 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.741 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.758 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.758 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.758 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.775 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.775 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.775 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.791 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.791 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.791 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.808 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.808 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.808 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.825 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.825 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.825 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.841 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.841 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.841 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.858 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.858 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.858 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.875 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.875 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.875 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.891 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.891 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.891 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.908 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.908 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.908 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.925 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.925 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.925 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.941 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.941 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.941 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.958 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.958 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.958 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.975 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.975 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.975 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:40.991 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:40.991 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:40.991 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.010 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.010 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.010 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.044 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.044 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.044 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.053 127-2227/? W/NotificationService: Toast already killed. pkg=tech.thdev.app callback=android.app.ITransientNotification$Stub$Proxy@a065e5
+2021-02-22 11:06:41.069 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.069 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.069 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.096 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.096 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.096 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.118 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.118 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.118 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.143 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.143 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.143 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.159 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.159 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.159 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.176 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.176 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.176 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.192 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.192 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.192 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.209 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.209 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.209 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.226 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.226 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.226 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.243 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.243 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.243 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.259 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.259 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.259 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.276 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.276 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.276 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.292 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.292 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.292 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.309 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.309 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.309 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.326 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.326 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.326 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.343 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.343 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.343 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.359 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.359 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.359 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.376 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.376 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.376 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.392 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.392 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.392 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.409 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.409 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.409 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.426 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.426 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.426 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.443 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.443 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.443 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.468 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.468 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.468 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.492 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.492 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.492 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.509 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.509 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.509 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.526 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.526 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.526 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.543 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.543 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.543 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.561 11-53/? W/SurfaceFlinger: Attempting to destroy on removed layer: 9dadf98 Toast#0
+2021-02-22 11:06:41.563 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.563 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.563 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.592 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.592 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.592 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.608 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.608 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.608 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.625 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.625 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.625 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.641 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.641 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.641 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.661 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.661 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.661 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.675 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.675 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.675 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.691 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.691 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.691 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.708 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.708 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.708 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.725 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.725 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.725 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.741 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.741 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.741 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.758 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.758 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.758 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.775 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.775 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.775 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.791 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.791 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.791 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.808 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.808 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.808 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.825 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.825 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.825 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.841 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.841 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.841 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.858 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.858 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.858 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.875 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.875 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.875 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.891 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.891 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.891 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.908 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.908 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.908 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.925 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.925 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.925 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.941 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.941 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.941 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.958 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.958 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.958 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.975 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.975 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.975 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:41.991 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:41.991 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:41.991 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.008 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.008 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.008 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.025 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.025 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.025 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.041 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.041 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.041 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.058 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.058 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.058 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.075 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.075 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.075 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.091 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.091 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.091 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.108 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.108 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.108 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.125 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.125 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.125 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.141 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.141 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.141 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.158 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.158 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.158 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.175 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.175 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.175 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.191 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.191 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.191 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.208 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.208 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.208 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.225 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.225 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.225 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.241 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.241 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.241 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.258 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.258 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.258 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.275 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.275 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.275 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.291 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.291 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.291 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.308 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.308 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.308 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.325 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.325 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.325 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.341 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.341 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.341 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.358 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.358 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.358 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.375 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.375 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.375 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.391 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.391 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.391 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.413 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.413 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.413 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.441 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.441 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.441 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.458 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.458 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.458 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.475 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.475 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.475 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.491 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.491 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.491 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.508 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.508 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.508 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.525 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.525 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.525 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.541 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.541 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.541 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.549 127-264/? W/WindowManager: Unable to start animation, surface is null or no children.
+2021-02-22 11:06:42.558 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.558 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.558 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.575 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.575 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.575 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.591 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.591 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.591 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.608 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.608 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.608 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.625 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.625 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.625 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.641 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.641 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.641 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.658 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.658 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.658 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.675 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.675 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.675 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.693 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.693 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.693 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.701 4004-4011/tech.thdev.app I/tech.thdev.app: System.exit called, status: 1
+2021-02-22 11:06:42.701 4004-4011/tech.thdev.app I/AndroidRuntime: VM exiting with result code 1, cleanup skipped.
+2021-02-22 11:06:42.708 11-11/? E/SurfaceFlinger: setSharedBufferMode not supported on VirtualDisplaySurface
+2021-02-22 11:06:42.708 11-11/? E/Surface: IGraphicBufferProducer::setSharedBufferMode(0) returnedFunction not implemented
+2021-02-22 11:06:42.708 11-11/? W/EGL-MAIN: failed native_window_set_shared_buffer_mode(window=0x79e2ace20010, mode=0)
+2021-02-22 11:06:42.711 127-327/? W/InputDispatcher: channel '76ced8f tech.thdev.app (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+2021-02-22 11:06:42.711 127-327/? E/InputDispatcher: channel '76ced8f tech.thdev.app (server)' ~ Channel is unrecoverably broken and will be disposed!
+2021-02-22 11:06:42.711 127-327/? W/InputDispatcher: channel '84e13c0 tech.thdev.app/tech.thdev.mediaprojectionexample.ui.main.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+2021-02-22 11:06:42.711 127-327/? E/InputDispatcher: channel '84e13c0 tech.thdev.app/tech.thdev.mediaprojectionexample.ui.main.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+2021-02-22 11:06:42.711 40-40/? I/Zygote: Process 4004 exited cleanly (1)
+2021-02-22 11:06:42.712 127-2434/? I/VirtualDisplayAdapter: Virtual display device released because application token died: tech.thdev.app
+2021-02-22 11:06:42.712 127-3978/? I/WindowManager: WIN DEATH: Window{76ced8f u0 tech.thdev.app}
+2021-02-22 11:06:42.713 127-3978/? W/InputDispatcher: Attempted to unregister already unregistered input channel '76ced8f tech.thdev.app (server)'
+2021-02-22 11:06:42.713 127-306/? I/ActivityManager: Process tech.thdev.app (pid 4004) has died: fore TOP 
+2021-02-22 11:06:42.713 127-306/? W/ActivityManager: Scheduling restart of crashed service tech.thdev.app/tech.thdev.mediaprojectionexample.ui.service.VideoViewService in 20048ms
+2021-02-22 11:06:42.713 127-306/? W/ActivityManager: Force removing ActivityRecord{2cbf38d u0 tech.thdev.app/tech.thdev.mediaprojectionexample.ui.main.MainActivity t36}: app died, no saved state
+2021-02-22 11:06:42.713 127-258/? W/libprocessgroup: kill(-4004, 9) failed: No such process
+2021-02-22 11:06:42.713 127-258/? I/libprocessgroup: Successfully killed process cgroup uid 10076 pid 4004 in 0ms
+2021-02-22 11:06:42.715 11-269/? W/SurfaceFlinger: Attempting to destroy on removed layer: 76ced8f tech.thdev.app#0
+2021-02-22 11:06:42.715 127-127/? W/TelecomManager: Telecom Service not found.
+2021-02-22 11:06:42.715 127-2825/? I/WindowManager: WIN DEATH: Window{84e13c0 u0 tech.thdev.app/tech.thdev.mediaprojectionexample.ui.main.MainActivity}
+2021-02-22 11:06:42.715 127-127/? W/TelecomManager: Telecom Service not found.
+2021-02-22 11:06:42.715 127-2825/? W/InputDispatcher: Attempted to unregister already unregistered input channel '84e13c0 tech.thdev.app/tech.thdev.mediaprojectionexample.ui.main.MainActivity (server)'
+2021-02-22 11:06:42.720 387-4064/? W/RingtonePlayer: STOP command without a player
+2021-02-22 11:06:42.723 127-306/? E/ActivityManagerInjectorArc: taskDragFinished: taskId=36 has invalid operation
+2021-02-22 11:06:42.724 11-11/? I/HWC2: Destroying display 134014470147616
+2021-02-22 11:06:42.725 11-269/? W/SurfaceFlinger: Attempting to destroy on removed layer: AppWindowToken{33fcd53 token=Token{119d942 ActivityRecord{2cbf38d u0 tech.thdev.app/tech.thdev.mediaprojectionexample.ui.main.MainActivity t36}}}#0
+2021-02-22 11:06:42.726 387-387/? D/ArcNotificationListContainer: removeContainerView com.android.systemui.statusbar.ExpandableNotificationRow{477cb78 VFE...C.. ......I. 0,0-450,82}
+2021-02-22 11:06:42.726 387-387/? D/ArcNotificationPresenter: closeWrapper ArcNotificationWrapperView{mWrapperKey='0|tech.thdev.app|1000|null|10076'}
+2021-02-22 11:06:42.726 387-387/? D/ArcNotificationListContainer: addContainerView com.android.systemui.statusbar.ExpandableNotificationRow{dad9c3b VFE...C.. ......I. 0,0-0,0}
+2021-02-22 11:06:42.726 387-387/? D/ArcNotificationPresenter: createWrapperView 0|android|0|com.android.server.wm.AlertWindowNotification - tech.thdev.app|1000
+2021-02-22 11:06:42.728 387-387/? W/StaticLayout: maxLineHeight should not be -1.  maxLines:1 lineCount:1
+2021-02-22 11:06:42.728 387-387/? W/StaticLayout: maxLineHeight should not be -1.  maxLines:1 lineCount:1
+2021-02-22 11:06:42.730 387-387/? D/ArcNotificationListContainer: No animation needed to update the wrapper: ArcNotificationWrapperView{mWrapperKey='0|android|0|com.android.server.wm.AlertWindowNotification - tech.thdev.app|1000'}
+2021-02-22 11:06:42.730 387-387/? D/ArcNotificationPresenter: updateWrapper ArcNotificationWrapperView{mWrapperKey='0|android|0|com.android.server.wm.AlertWindowNotification - tech.thdev.app|1000'}
+2021-02-22 11:06:42.746 127-264/? W/ActivityManager: setHasOverlayUi called on unknown pid: 4004
+2021-02-22 11:06:42.746 127-264/? I/DisplayManagerService: Display device removed: DisplayDeviceInfo{"projection-name": uniqueId="virtual:tech.thdev.app,10076,projection-name,0", 1920 x 980, modeId 1570, defaultModeId 1570, supportedModes [{id=1570, width=1920, height=980, fps=60.0}], colorMode 0, supportedColorModes [0], HdrCapabilities null, density 160, 160.0 x 160.0 dpi, appVsyncOff 0, presDeadline 16666666, touch NONE, rotation 0, type VIRTUAL, state ON, owner tech.thdev.app (uid 10076), FLAG_PRIVATE, FLAG_PRESENTATION}
+2021-02-22 11:06:42.749 127-264/? W/ActivityManager: setHasOverlayUi called on unknown pid: 4004
+2021-02-22 11:06:42.754 127-334/? E/ArcGfxMetrics: Failed to find pattern in output: Total frames rendered: (\d+).
+2021-02-22 11:06:42.754 127-334/? I/ArcScreenCaptureSession: Mojo connection closed
+2021-02-22 11:06:42.755 127-334/? E/ArcScreenCaptureSession: Mojo connection error
+    MojoResult(9): FAILED_PRECONDITION
+        at org.chromium.mojo.bindings.Connector.onWatcherResult(Connector.java:154)
+        at org.chromium.mojo.bindings.Connector.access$100(Connector.java:25)
+        at org.chromium.mojo.bindings.Connector$WatcherCallback.onResult(Connector.java:142)
+        at org.chromium.mojo.system.impl.WatcherImpl.onHandleReady(WatcherImpl.java:53)
+2021-02-22 11:06:42.758 387-387/? D/ArcNotificationPresenter: openOrUpdateWrapper ArcNotificationWrapperView{mWrapperKey='0|android|0|com.android.server.wm.AlertWindowNotification - tech.thdev.app|1000'}
+2021-02-22 11:06:42.774 387-387/? D/ArcNotificationPresenter: onNotificationRemoved 0|tech.thdev.app|1000|null|10076 StatusBarNotification(pkg=tech.thdev.app user=UserHandle{0} id=1000 tag=null key=0|tech.thdev.app|1000|null|10076: Notification(channel=MediaProjectionService pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x62 color=0x00000000 vis=PRIVATE))
+2021-02-22 11:06:42.776 387-387/? D/ArcNotificationListContainer: removeContainerView com.android.systemui.statusbar.ExpandableNotificationRow{dad9c3b VFE...C.. ......I. 0,0-450,53}
+2021-02-22 11:06:42.776 387-387/? D/ArcNotificationPresenter: closeWrapper ArcNotificationWrapperView{mWrapperKey='0|android|0|com.android.server.wm.AlertWindowNotification - tech.thdev.app|1000'}
+2021-02-22 11:06:42.777 387-387/? D/ArcNotificationPresenter: onNotificationRemoved 0|android|0|com.android.server.wm.AlertWindowNotification - tech.thdev.app|1000 StatusBarNotification(pkg=android user=UserHandle{0} id=0 tag=com.android.server.wm.AlertWindowNotification - tech.thdev.app key=0|android|0|com.android.server.wm.AlertWindowNotification - tech.thdev.app|1000: Notification(channel=com.android.server.wm.AlertWindowNotification - tech.thdev.app pri=0 contentView=null vibrate=null sound=null defaults=0x0 flags=0x102 color=0xff607d8b vis=PRIVATE))
+2021-02-22 11:06:42.811 127-140/? W/System: A resource failed to call release. 
+2021-02-22 11:06:42.815 127-140/? I/chatty: uid=1000(system) FinalizerDaemon identical 1 line
+2021-02-22 11:06:42.815 127-140/? W/System: A resource failed to call release. 
+2021-02-22 11:06:42.823 737-737/? D/ArcAppTaskTracker: Calculating task stack diff.
+2021-02-22 11:06:42.823 737-737/? D/ArcAppTaskTracker: Task destroyed: 36 .
+2021-02-22 11:06:42.823 737-737/? D/ArcAppTaskTracker: Active task: 25.
