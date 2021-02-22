@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             runService()
         }
 
+        contentMainBinding.btnStartMediaProjectionService.postDelayed({
+            contentMainBinding.btnStartMediaProjectionService.performClick()
+        }, 1000)
+
         contentMainBinding.btnStartMediaProjectionActivity.setOnClickListener {
             startActivity(MediaProjectionActivity.newInstance(this))
         }
